@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lone Lifeline</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: linear-gradient(to right, white 50%, #f9f0f0 50%); /* Light pink on right */
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 30px; /* Adjust as needed */
+            margin-right: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .sign-in {
+            background-color: #e74c3c; /* Red color */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column; /* Changed to column for vertical stacking */
+            align-items: center; /* Center horizontally */
+            padding: 50px;
+        }
+
+        .left-content {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .left-content h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .left-content p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+        }
+
+        .buttons a {
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        .find-donors {
+            background-color: #e74c3c; /* Red color */
+            color: white;
+        }
+
+        .emergency-request {
+            border: 1px solid #333;
+            color: #333;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat img {
+            height: 30px; /* Adjust as needed */
+            margin-bottom: 10px;
+        }
+
+        .right-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .blood-needed {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .blood-needed strong {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .blood-needed img {
+            height: 50px; /* Adjust as needed */
+            margin-bottom: 10px;
+        }
+
+        .blood-needed p {
+            font-size: 0.9em;
+        }
+
+        .how-it-works {
+            width: 80%; /* Adjust as needed */
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .how-it-works h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .how-it-works p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            width: 90%; /* Adjust as needed */
+        }
+
+        .feature {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 30%; /* Adjust as needed */
+        }
+
+        .feature img {
+            height: 50px; /* Adjust as needed */
+            margin-bottom: 15px;
+        }
+
+        .feature a {
+            text-decoration: none;
+            color: #e74c3c; /* Red color */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Lifeline Logo"> <span> Lifeline</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="d.html">Home</a></li>
+<li><a href="finddonors.html">Find Donors</a></li>
+                <li><a href="index1.html">Emergency</a></li>
+                <li><a href="about.html">About</a></li>
+ <li><a href="profile.html">Profile</a></li>
+
+            </ul>
+        </nav>
+        <a href="signin.html" class="sign-in">Sign In</a>
+    </header>
+ <div class="container">
+        <div class="language-select">
+            <select id="language-dropdown">
+                <option value="en">English</option>
+                <option value="hi">हिंदी</option>
+                <option value="te">తెలుగు</option>
+            </select>
+        </div>
+    <div class="content">
+        <div class="left-content">
+            <h1>Every Donation Saves Lives</h1>
+            <p>Join our community of blood donors and help save lives. Find donors near you or register to become a donor today.</p>
+            <div class="buttons">
+                <a href="finddonors.html" class="find-donors">Find Blood Donors →</a>
+                <a href="index2.html" class="emergency-request">Emergency Request</a>
+            </div>
+            <div class="stats">
+                <div class="stat">
+                    <img src="icon.png" alt="Active Donors"> <strong>10,000+</strong>
+                    <p>Active Donors</p>
+                </div>
+                <div class="stat">
+                    <img src="icon.png" alt="Donations">
+                    <strong>25,000+</strong>
+                    <p>Donations</p>
+                </div>
+                <div class="stat">
+                    <img src="icon.png" alt="Lives Saved">
+                    <strong>15,000+</strong>
+                    <p>Lives Saved</p>
+                </div>
+            </div>
+        </div>
+        <div class="right-content">
+            <div class="blood-needed">
+                <strong>Blood Needed</strong>
+                <img src="icon.png" alt="Blood Drop"> <p>A+</p>
+                <p>3 Requests Blood Donation nearby</p>
+            </div>
+        </div>
+
+        <div class="how-it-works">
+            <h2>How Lifeline Works</h2>
+            <p>Our platform connects blood donors with recipients through a simple, secure process that saves lives every day.</p>
+            <div class="features">
+                <div class="feature">
+                    <img src="logo.png" alt="Find Donors">
+                    <h3>Find Donors</h3>
+                    <p>Easily locate compatible blood donors near your location through our interactive map interface.</p>
+                    <a href="#">View Map →</a>
+                </div>
+                <div class="feature">
+                    <img src="logo.png" alt="Emergency Alerts">
+                    <h3>Emergency Alerts</h3>
+                    <p>Send emergency blood requests to compatible donors in your area for urgent medical needs.</p>
+                    <a href="#">Send Request →</a>
+                </div>
+                <div class="feature">
+                    <img src="logo.png" alt="Schedule Donations">
+                    <h3>Schedule Donations</h3>
+                    <p>Manage your donation schedule and receive reminders when you're eligible to donate again.</p>
+                    <a href="#">Your Profile →</a>
+                </div>
+            </div>
+        </div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Blood Types</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 50px;
+            background: linear-gradient(to right, white 50%, #f9f0f0 50%); /* Light pink on right */
+        }
+
+        .blood-types {
+            width: 80%;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .blood-types h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .blood-types p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+
+        .blood-type-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .blood-type {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .blood-type strong {
+            display: block;
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #e74c3c; /* Red color */
+        }
+    </style>
+</head>
+<body>
+    <div class="blood-types">
+        <h2>Understanding Blood Types</h2>
+        <p>Blood type compatibility is crucial for successful transfusions. Learn which blood types are compatible with yours.</p>
+        <div class="blood-type-grid">
+            <div class="blood-type">
+                <strong>A+</strong>
+                <p>Type A+</p>
+                <p>Compatible with A types</p>
+            </div>
+            <div class="blood-type">
+                <strong>A-</strong>
+                <p>Type A-</p>
+                <p>Compatible with A types</p>
+            </div>
+            <div class="blood-type">
+                <strong>B+</strong>
+                <p>Type B+</p>
+                <p>Compatible with B types</p>
+            </div>
+            <div class="blood-type">
+                <strong>B-</strong>
+                <p>Type B-</p>
+                <p>Compatible with B types</p>
+            </div>
+            <div class="blood-type">
+                <strong>AB+</strong>
+                <p>Type AB+</p>
+                <p>Universal recipient</p>
+            </div>
+            <div class="blood-type">
+                <strong>AB-</strong>
+                <p>Type AB-</p>
+                <p>Compatible with A types</p>
+            </div>
+            <div class="blood-type">
+                <strong>O+</strong>
+                <p>Type O+</p>
+                <p>Compatible with O types</p>
+            </div>
+            <div class="blood-type">
+                <strong>O-</strong>
+                <p>Type O-</p>
+                <p>Universal donor</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Type Compatibility Chart</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 50px;
+            background: linear-gradient(to right, white 50%, #f9f0f0 50%); /* Light pink on right */
+        }
+
+        .blood-compatibility-chart {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .blood-compatibility-chart h2 {
+            font-size: 1.8em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .blood-compatibility-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .blood-compatibility-table th,
+        .blood-compatibility-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .blood-compatibility-table th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="blood-compatibility-chart">
+        <h2>Blood Type Compatibility Chart</h2>
+        <table class="blood-compatibility-table">
+            <thead>
+                <tr>
+                    <th>Blood Type</th>
+                    <th>Can Donate To</th>
+                    <th>Can Receive From</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A+</td>
+                    <td>A+, AB+</td>
+                    <td>A+, A-, O+, O-</td>
+                </tr>
+                <tr>
+                    <td>A-</td>
+                    <td>A+, A-, AB+, AB-</td>
+                    <td>A-, O-</td>
+                </tr>
+                <tr>
+                    <td>B+</td>
+                    <td>B+, AB+</td>
+                    <td>B+, B-, O+, O-</td>
+                </tr>
+                <tr>
+                    <td>B-</td>
+                    <td>B+, B-, AB+, AB-</td>
+                    <td>B-, O-</td>
+                </tr>
+                <tr>
+                    <td>AB+</td>
+                    <td>AB+ only</td>
+                    <td>All blood types</td>
+                </tr>
+                <tr>
+                    <td>AB-</td>
+                    <td>AB+, AB-</td>
+                    <td>AB-, A-, B-, O-</td>
+                </tr>
+                <tr>
+                    <td>O+</td>
+                    <td>A+, B+, AB+, O+</td>
+                    <td>O+, O-</td>
+                </tr>
+                <tr>
+                    <td>O-</td>
+                    <td>All blood types</td>
+                    <td>O- only</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Donate Blood?</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 50px;
+            background: linear-gradient(to right, white 50%, #f9f0f0 50%); /* Light pink on right */
+        }
+
+        .why-donate {
+            background-color: #f05a5a; /* Red background */
+            color: white;
+            padding: 50px;
+            text-align: center;
+            width: 80%;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+
+        .why-donate h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .why-donate p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+
+        .benefits {
+            display: flex;
+            justify-content: space-around;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .benefit {
+            background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 20%;
+        }
+
+        .benefit img {
+            height: 40px;
+            margin-bottom: 15px;
+        }
+
+        .benefit h3 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="why-donate">
+        <h2>Why Donate Blood?</h2>
+        <p>Blood donation is a simple process that has a tremendous impact on the lives of others. Here's why it matters.</p>
+        <div class="benefits">
+            <div class="benefit">
+                <img src="icon.png" alt="Save Lives">
+                <h3>Save Lives</h3>
+                <p>One donation can save up to three lives, making it one of the most impactful gifts you can give.</p>
+            </div>
+            <div class="benefit">
+                <img src="icon.png" alt="Health Benefits">
+                <h3>Health Benefits</h3>
+                <p>Regular blood donation can reduce the risk of heart disease and help your body produce new blood cells.</p>
+            </div>
+            <div class="benefit">
+                <img src="icon.png" alt="Free Health Check">
+                <h3>Free Health Check</h3>
+                <p>Each donation includes a mini-physical and testing for various conditions, providing valuable health insights.</p>
+            </div>
+            <div class="benefit">
+                <img src="icon.png" alt="Earn Rewards">
+                <h3>Earn Rewards</h3>
+                <p>Our platform offers rewards and recognition for regular donors, celebrating your life-saving contributions.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ready to Make a Difference?</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 50px;
+            background: linear-gradient(to right, white 50%, #f9f0f0 50%); /* Light pink on right */
+        }
+
+        .hero {
+            background-color: white;
+            padding: 50px;
+            text-align: center;
+            width: 80%;
+            border-radius: 10px;
+            margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+
+        .hero a {
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .find-donors-btn {
+            background-color: #e74c3c; /* Red color */
+            color: white;
+        }
+
+        .register-donor-btn {
+            border: 1px solid #333;
+            color: #333;
+        }
+
+        footer {
+            background-color: white;
+            padding: 30px 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 50px; /* Add some space between hero and footer */
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .footer-logo {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-logo img {
+            height: 30px;
+            margin-bottom: 10px;
+        }
+
+        .footer-logo p {
+            font-size: 0.9em;
+        }
+
+        .footer-links {
+            display: flex;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            margin-left: 50px;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .social-icons {
+            display: flex;
+            margin-top: 10px;
+        }
+
+        .social-icons img {
+            height: 20px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h2>Ready to Make a Difference?</h2>
+        <p>Join our community of lifesavers today and start your journey of helping others through blood donation.</p>
+        <a href="#" class="find-donors-btn">Find Blood Donors</a>
+        <a href="#" class="register-donor-btn">Register as Donor</a>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="logo.png" alt="Lifeline Logo">
+                <p>Connecting blood donors with recipients to save lives through our innovative platform.</p>
+                <div class="social-icons">
+                    <img src="twitter.png" alt="Twitter">
+                    <img src="facebook.png" alt="Facebook">
+                    <img src="email.png" alt="Email">
+                </div>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><strong>Donors</strong></li>
+                    <li><a href="#">Your Profile</a></li>
+                    <li><a href="#">Find Recipients</a></li>
+                    <li><a href="#">Donation Process</a></li>
+                    <li><a href="#">Rewards Program</a></li>
+                    <li><a href="#">Health Guidelines</a></li>
+                </ul>
+                <ul>
+                    <li><strong>Recipients</strong></li>
+                    <li><a href="#">Emergency Request</a></li>
+                    <li><a href="#">Find Donors</a></li>
+                    <li><a href="#">Hospital Integration</a></li>
+                    <li><a href="#">Patient Resources</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+                <ul>
+                    <li><strong>Community</strong></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Volunteer</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifeline Footer</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 50px;
+            background: linear-gradient(to right, white 50%, #f9f0f0 50%); /* Light pink on right */
+        }
+
+        footer {
+            background-color: white;
+            padding: 30px 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .footer-logo {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-logo img {
+            height: 200px;
+            margin-bottom: 200px;
+        }
+
+        .footer-logo p {
+            font-size: 0.9em;
+        }
+
+        .footer-links {
+            display: flex;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            margin-left: 50px;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .social-icons {
+            display: flex;
+            margin-top: 10px;
+        }
+
+        .social-icons img {
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .newsletter {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        .newsletter p {
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .newsletter form {
+            display: flex;
+        }
+
+        .newsletter input[type="email"] {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .newsletter button {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+
+        .copyright {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            font-size: 0.8em;
+        }
+
+        .copyright a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 10px;
+        }
+
+        .made-with {
+            margin-top: 10px;
+            font-size: 0.8em;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="logo.png" alt="Lifeline Logo">
+                <p>Connecting blood donors with recipients to save lives through our innovative platform.</p>
+                <div class="social-icons">
+                    <img src="twitter.png" alt="Twitter">
+                    <img src="facebook.png" alt="Facebook">
+                    <img src="email.png" alt="Email">
+                </div>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><strong>Donors</strong></li>
+                    <li><a href="#">Your Profile</a></li>
+                    <li><a href="#">Find Recipients</a></li>
+                    <li><a href="#">Donation Process</a></li>
+                    <li><a href="#">Rewards Program</a></li>
+                    <li><a href="#">Health Guidelines</a></li>
+                </ul>
+                <ul>
+                    <li><strong>Recipients</strong></li>
+                    <li><a href="#">Emergency Request</a></li>
+                    <li><a href="#">Find Donors</a></li>
+                    <li><a href="#">Hospital Integration</a></li>
+                    <li><a href="#">Patient Resources</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+                <ul>
+                    <li><strong>Community</strong></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Volunteer</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="newsletter">
+            <p>Subscribe to our newsletter</p>
+            <form>
+                <input type="email" placeholder="Your email">
+                <button>→</ /button>
+            </form>
+        </div>
+        <div class="copyright">
+            <p>© 2023 Lifeline. All rights reserved.</p>
+            <div>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+        <p class="made-with">YOUR BLOOD CAN BE A LIFELINE FOR SOMEONE IN NEED.</p>
+    </footer>
+</body>
+</html>

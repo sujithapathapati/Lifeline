@@ -1,0 +1,134 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: white;
+    color: black;
+    border-bottom: 2px solid red;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+h1 {
+    color: red;
+}
+
+.menu-toggle {
+    font-size: 24px;
+    background: none;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+/* Emergency Section */
+.emergency-section {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border: 2px solid red;
+    border-radius: 10px;
+    color: black;
+}
+
+.alert-icon {
+    font-size: 50px;
+    color: red;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.step {
+    padding: 10px 15px;
+    margin: 5px;
+    background: gray;
+    border-radius: 50%;
+    color: white;
+}
+
+.completed {
+    background: green;
+}
+
+.active {
+    background: red;
+}
+
+/* Request Details */
+.request-details {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    border: 2px solid red;
+    color: black;
+}
+
+.request-details p {
+    margin: 10px 0;
+}
+
+/* Important Notice */
+.important-notice {
+    background: red;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+    color: white;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.edit-btn {
+    background: gray;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.submit-btn {
+    background: red;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background: white;
+    color: black;
+    border-top: 2px solid red;
+}

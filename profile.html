@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifeline - Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #2d3748;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo img {
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        header .logo h1 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #e53e3e;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 600;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #e53e3e;
+        }
+
+        .sign-in-btn {
+            background-color: #e53e3e;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-size: 14px;
+        }
+
+        .sign-in-btn:hover {
+            background-color: #c53030;
+            transform: translateY(-2px);
+        }
+
+        .sign-in-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        #profile-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        #profile-header h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #2d3748;
+            margin: 0;
+        }
+
+        .edit-profile-btn {
+            background-color: #e53e3e;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-size: 14px;
+        }
+
+        .edit-profile-btn:hover {
+            background-color: #c53030;
+            transform: translateY(-2px);
+        }
+
+        .edit-profile-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        #user-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        #user-info img {
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            margin-right: 20px;
+            object-fit: cover;
+        }
+
+        #user-info-details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #user-info-details h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2d3748;
+            margin: 0 0 5px 0;
+        }
+
+        #user-info-details p {
+            font-size: 14px;
+            color: #718096;
+            margin: 0;
+        }
+
+        #user-stats {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 20px;
+        }
+
+        #user-stats div {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        #user-stats div span {
+            font-size: 16px;
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        .profile-nav {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+
+        .profile-nav a {
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 600;
+            font-size: 14px;
+            margin-right: 20px;
+            transition: color 0.3s ease;
+            padding-bottom: 8px;
+        }
+
+        .profile-nav a:hover {
+            color: #e53e3e;
+        }
+
+        .profile-nav a.active {
+            color: #e53e3e;
+            border-bottom: 2px solid #e53e3e;
+        }
+
+        #personal-info {
+            margin-bottom: 20px;
+        }
+
+        #personal-info h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+
+        #personal-info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        #personal-info-grid div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #personal-info-grid div span:first-child {
+            font-size: 12px;
+            color: #718096;
+            margin-bottom: 5px;
+        }
+
+        #personal-info-grid div span:last-child {
+            font-size: 14px;
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        #donation-preferences {
+            margin-bottom: 20px;
+        }
+
+        #donation-preferences h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+
+        #donation-preferences-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        #donation-preferences-grid div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #donation-preferences-grid div span:first-child {
+            font-size: 12px;
+            color: #718096;
+            margin-bottom: 5px;
+        }
+
+        #donation-preferences-grid div span:last-child {
+            font-size: 14px;
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        #health-info {
+            margin-bottom: 20px;
+        }
+
+        #health-info h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+
+        #health-info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        #health-info-grid div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #health-info-grid div span:first-child {
+            font-size: 12px;
+            color: #718096;
+            margin-bottom: 5px;
+        }
+
+        #health-info-grid div span:last-child {
+            font-size: 14px;
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        #donation-stats {
+            margin-bottom: 20px;
+        }
+
+        #donation-stats h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+
+        #donation-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            text-align: center;
+        }
+
+        #donation-stats-grid div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #donation-stats-grid div span:first-child {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2d3748;
+        }
+
+        #donation-stats-grid div span:last-child {
+            font-size: 14px;
+            color: #718096;
+        }
+
+        #progress-section {
+            margin-bottom: 20px;
+        }
+
+        #progress-section h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+
+        .progress-bar {
+            background-color: #e2e8f0;
+            height: 10px;
+            border-radius: 5px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .progress-bar-fill {
+            background-color: #48bb78;
+            height: 10px;
+            border-radius: 5px;
+            width: 30%;
+        }
+
+        .progress-bar-text {
+            font-size: 12px;
+            color: #2d3748;
+        }
+
+        #schedule-donation {
+            text-align: center;
+        }
+
+        .schedule-donation-btn {
+            background-color: #e53e3e;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-size: 14px;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .schedule-donation-btn:hover {
+            background-color: #c53030;
+            transform: translateY(-2px);
+        }
+
+        .schedule-donation-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        .text-muted{
+            font-size: 12px;
+            color: #718096;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Lifeline Logo">
+            <h1>Lifeline</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="d.html">Home</a></li>
+                <li><a href="finddonors.html">Find Donors</a></li>
+                <li><a href="index1.html">Emergency</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="sign-in-btn">Sign In</a>
+    </header>
+
+    <div class="container">
+        <div id="profile-header">
+            <h2>Sarah Johnson</h2>
+            <a href="#" class="edit-profile-btn">Edit Profile</a>
+        </div>
+
+        <div id="user-info">
+            <img src="pic.jpg" alt="Profile Picture">
+            <div id="user-info-details">
+                <h3>Sarah Johnson</h3>
+                <p>San Francisco, CA</p>
+                <div>
+                    <span>A+</span>
+                    <span>Next: Jun 15</span>
+                    <span>3 Lives</span>
+                </div>
+            </div>
+        </div>
+
+        <nav class="profile-nav">
+            <a href="#" class="active">Profile</a>
+            <a href="#">Donations</a>
+            <a href="#">Achievements</a>
+        </nav>
+
+        <section id="personal-info">
+            <h4>Personal Information</h4>
+            <div id="personal-info-grid">
+                <div>
+                    <span>Age</span>
+                    <span>28</span>
+                </div>
+                <div>
+                    <span>Gender</span>
+                    <span>Female</span>
+                </div>
+                <div>
+                    <span>Weight</span>
+                    <span>140 lbs</span>
+                </div>
+                <div>
+                    <span>Email</span>
+                    <span>sarah.johnson@example.com</span>
+                </div>
+                <div>
+                    <span>Phone</span>
+                    <span>(555) 123-4567</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="donation-preferences">
+            <h4>Donation Preferences</h4>
+            <div id="donation-preferences-grid">
+                <div>
+                    <span>Willing to donate</span>
+                    <span>Available</span>
+                </div>
+                <div>
+                    <span>Notification radius</span>
+                    <span>15 miles</span>
+                </div>
+                 <div>
+                    <span>Emergency requests</span>
+                    <span></span>
+                </div>
+                <div>
+                    <span>Anonymous donation</span>
+                    <span></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="health-info">
+            <h4>Health Information</h4>
+            <div id="health-info-grid">
+                <div>
+                    <span>Medical Conditions</span>
+                    <span>All Clear</span>
+                </div>
+                <div>
+                    <span>Medications</span>
+                    <span>None</span>
+                </div>
+                <div>
+                    <span>Last Checkup</span>
+                    <span>March 17, 2023</span>
+                </div>
+            </div>
+            <p class="text-muted">Your health information is private and only shared with verified medical institutions when you authorize a donation.</p>
+        </section>
+
+        <section id="donation-stats">
+            <h4>Donation Stats</h4>
+            <div id="donation-stats-grid">
+                <div>
+                    <span>3</span>
+                    <span>Total Donations</span>
+                </div>
+                <div>
+                    <span>3</span>
+                    <span>Lives Saved</span>
+                </div>
+                <div>
+                    <span>5</span>
+                    <span>Reward Points</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="progress-section">
+            <h4>Progress to Gold Status</h4>
+            <div class="progress-bar">
+                <div class="progress-bar-fill"></div>
+            </div>
+            <p class="progress-bar-text">3/10</p>
+        </section>
+
+        <section id="schedule-donation">
+            <a href="#" class="schedule-donation-btn">+ Schedule Next Donation</a>
+        </section>
+    </div>
+</body>
+</html>

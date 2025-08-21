@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Blood Donors | Lifeline</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #f8f8f8;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+        .navbar ul li {
+            margin: 0 15px;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        .sign-in {
+            background-color: red;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        .search-box {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: auto;
+        }
+        .filter-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .filter-btn:hover {
+            background-color: darkred;
+        }
+        .donor-list {
+            margin-top: 50px;
+            max-width: 600px;
+            margin: auto;
+        }
+        .donor {
+            background-color: #e6e6e6;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        .chart-container {
+            margin-top: 20px;
+            max-width: 600px;
+            margin: auto;
+        }
+        footer {
+            background-color: #f8f8f8;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="d.html">Home</a></li>
+            <li><a href="finddonors.html">Find Donors</a></li>
+            <li><a href="index1.html">Emergency</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <a href="signin" class="sign-in">Sign In</a>
+    </div>
+    <div class="container">
+        <h1>Lifeline</h1>
+        <p>Connecting blood donors with recipients to save lives through our innovative platform.</p>
+        
+        <h2>Find Blood Donors</h2>
+        <p>Locate donors near you based on blood type and distance. Connect directly with compatible donors in your area.</p>
+        <div class="search-box">
+            <input type="text" placeholder="Search by location">
+            <select>
+                <option>Any blood type</option>
+                <option>O+</option>
+                <option>A+</option>
+                <option>B+</option>
+            </select>
+            <input type="range" min="1" max="50" value="10">
+            <button class="filter-btn">Filter</button>
+        </div>
+        <div class="donor-list" style="margin-top: 100px;">
+            <div class="donor">O+ - David Kim - 0.5 miles - Downtown</div>
+            <div class="donor">A- - Sarah Johnson - 1.2 miles - Westside</div>
+            <div class="donor">B+ - Michael Chen - 1.8 miles - Northgate</div>
+            <div class="donor">AB+ - Emily Rodriguez - 2.3 miles - Eastside</div>
+            <div class="donor">O- - James Wilson - 3.1 miles - Southpark</div>
+        </div>
+        <div class="chart-container">
+            <canvas id="bloodChart"></canvas>
+        </div>
+    </div>
+    <footer>
+        <h2>Lifeline</h2>
+        <p>Connecting blood donors with recipients to save lives through our innovative platform.</p>
+        <h3>Donors</h3>
+        <p>Your Profile | Find Recipients | Donation Process | Rewards Program | Health Guidelines</p>
+        <h3>Recipients</h3>
+        <p>Emergency Request | Find Donors | Hospital Integration | Patient Resources | FAQ</p>
+        <h3>Community</h3>
+        <p>About Us | Blog | Volunteer | Events | Contact</p>
+        <h3>Subscribe to our newsletter</h3>
+        <p>Get the latest updates on blood donation drives and opportunities.</p>
+        <input type="email" placeholder="Your email">
+        <p>&copy; 2023 Lifeline. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Cookie Policy</a></p>
+        <p>Made with ❤ for those in need</p>
+    </footer>
+    <script>
+        var ctx = document.getElementById('bloodChart').getContext('2d');
+        var bloodChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['O+', 'A-', 'B+', 'AB+', 'O-'],
+                datasets: [{
+                    label: 'Number of Donors',
+                    data: [10, 5, 7, 6, 4],
+                    backgroundColor: ['red', 'blue', 'green', 'orange', 'purple']
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
