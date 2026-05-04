@@ -10,7 +10,7 @@ It helps people in need of blood find nearby donors quickly and easily.
  5.Secure sign-in option 
  6.Appreciation and encouragement for donor
  
- Technologies Used
+ Technologies Used:
 - HTML– structure of the web pages  
 - CSS – styling and layout  
 - JavaScript– for interactivity and validation  
