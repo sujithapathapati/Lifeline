@@ -8,7 +8,7 @@ It helps people in need of blood find nearby donors quickly and easily.
  3.Donor profile page.
  4.Simple and user-friendly interface.  
  5.Secure sign-in option. 
- 6.Appreciation and encouragement for donor
+ 6.Appreciation and encouragement for donor.
  
  Technologies Used:
 - HTML– structure of the web pages  
